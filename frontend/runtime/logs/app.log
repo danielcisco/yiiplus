@@ -1,0 +1,235 @@
+2020-03-17 03:53:52 [::1][-][ucgqdk14fsvcqsqt0t55vk1des][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: dektrium\user\models\User::confirmed_at in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('confirmed_at')
+#1 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\User.php(107): yii\db\BaseActiveRecord->__get('confirmed_at')
+#2 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\LoginForm.php(96): dektrium\user\models\User->getIsConfirmed()
+#3 [internal function]: dektrium\user\models\LoginForm->dektrium\user\models\{closure}('login', NULL, Object(yii\validators\InlineValidator))
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Object(Closure), 'login', NULL, Object(yii\validators\InlineValidator))
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(dektrium\user\models\LoginForm), 'login')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(dektrium\user\models\LoginForm), Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\widgets\ActiveForm.php(419): yii\base\Model->validate(Array)
+#8 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\traits\AjaxValidationTrait.php(34): yii\widgets\ActiveForm::validate(Object(dektrium\user\models\LoginForm))
+#9 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\controllers\SecurityController.php(155): dektrium\user\controllers\SecurityController->performAjaxValidation(Object(dektrium\user\models\LoginForm))
+#10 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/security/l...', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 03:53:51 [::1][-][ucgqdk14fsvcqsqt0t55vk1des][info][application] $_GET = [
+    'r' => 'user/security/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => '2UQYXyAab1pnOFtsP0Ec59a-2BRPh0iPsJc82jED2V3vByEoZVUeDigKIyZqdXSRnY-WRBbuLfvqxwqxUE--Pg=='
+    'login-form' => [
+        'login' => 'daniel'
+        'password' => 'daniel123'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '8d29a2757c0bc729a8e49dc7cdba2c64d03d2974389ec97085f745ab012c80cea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"F-eHZT69g_ZbU-z-miqJpjKHKB75xhGE\";}'
+    'advanced-backend' => 'qkdcr3uh9s7dicddt8r99di2f5'
+    'advanced-frontend' => 'ucgqdk14fsvcqsqt0t55vk1des'
+    '_csrf-frontend' => 'c521c75b2bfd52d83f2b622c1b0914ec6cd57678fd9f5fa3335c478ad0e6d574a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"6C9wEOqTO2xJU4hvK1NPYietZP6kaLgc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/frontend/web/index.php?r=site%2Fabout'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '216'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => '2UQYXyAab1pnOFtsP0Ec59a-2BRPh0iPsJc82jED2V3vByEoZVUeDigKIyZqdXSRnY-WRBbuLfvqxwqxUE--Pg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/frontend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf-backend=8d29a2757c0bc729a8e49dc7cdba2c64d03d2974389ec97085f745ab012c80cea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22F-eHZT69g_ZbU-z-miqJpjKHKB75xhGE%22%3B%7D; advanced-backend=qkdcr3uh9s7dicddt8r99di2f5; advanced-frontend=ucgqdk14fsvcqsqt0t55vk1des; _csrf-frontend=c521c75b2bfd52d83f2b622c1b0914ec6cd57678fd9f5fa3335c478ad0e6d574a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%226C9wEOqTO2xJU4hvK1NPYietZP6kaLgc%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/frontend/web/index.php'
+    'REMOTE_PORT' => '60225'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fsecurity%2Flogin'
+    'REQUEST_URI' => '/yiiplus/frontend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'SCRIPT_NAME' => '/yiiplus/frontend/web/index.php'
+    'PHP_SELF' => '/yiiplus/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584417231.912
+    'REQUEST_TIME' => 1584417231
+]
+2020-03-17 03:54:03 [::1][3][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in C:\AppServ\www\yiiplus\frontend\controllers\SiteController.php on line 70. in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Response.php:366
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Response.php(339): yii\web\Response->sendHeaders()
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#2 C:\AppServ\www\yiiplus\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2020-03-17 03:54:03 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '8d29a2757c0bc729a8e49dc7cdba2c64d03d2974389ec97085f745ab012c80cea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"F-eHZT69g_ZbU-z-miqJpjKHKB75xhGE\";}'
+    'advanced-backend' => 'qkdcr3uh9s7dicddt8r99di2f5'
+    'advanced-frontend' => 'l0nmeqbbh1vdmi6ji7j5k4qqu5'
+    '_identity' => '0cd1ebdb271b4e69b4ff2e16c6bda249bed0b795476ff75917d1a9dc96c8d27da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-frontend' => '61afd42f07e8ecbde862bf4dd36fe7435832869af93b89f31d526d1b72cce815a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CovE8Z6TdnBFTh7U4mEHkLyY3u2KqGb2\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/frontend/web/index.php?r=site%2Fabout'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/frontend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf-backend=8d29a2757c0bc729a8e49dc7cdba2c64d03d2974389ec97085f745ab012c80cea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22F-eHZT69g_ZbU-z-miqJpjKHKB75xhGE%22%3B%7D; advanced-backend=qkdcr3uh9s7dicddt8r99di2f5; advanced-frontend=l0nmeqbbh1vdmi6ji7j5k4qqu5; _identity=0cd1ebdb271b4e69b4ff2e16c6bda249bed0b795476ff75917d1a9dc96c8d27da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-frontend=61afd42f07e8ecbde862bf4dd36fe7435832869af93b89f31d526d1b72cce815a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CovE8Z6TdnBFTh7U4mEHkLyY3u2KqGb2%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/frontend/web/index.php'
+    'REMOTE_PORT' => '60228'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'REQUEST_URI' => '/yiiplus/frontend/web/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/yiiplus/frontend/web/index.php'
+    'PHP_SELF' => '/yiiplus/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584417243.521
+    'REQUEST_TIME' => 1584417243
+]
+2020-03-17 22:22:41 [::1][-][20rl7gv93t3c7ee2b8it49m4uq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "cliente". in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('cliente', Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\AppServ\www\yiiplus\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\AppServ\www\yiiplus\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2020-03-17 22:22:40 [::1][-][20rl7gv93t3c7ee2b8it49m4uq][info][application] $_GET = [
+    'r' => 'cliente'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/frontend/web/index.php'
+    'REMOTE_PORT' => '52242'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=cliente'
+    'REQUEST_URI' => '/yiiplus/frontend/web/index.php?r=cliente'
+    'SCRIPT_NAME' => '/yiiplus/frontend/web/index.php'
+    'PHP_SELF' => '/yiiplus/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584483760.92
+    'REQUEST_TIME' => 1584483760
+]

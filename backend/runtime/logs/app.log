@@ -1,0 +1,1477 @@
+2020-03-11 14:05:35 [::1][-][rdbcqgn7vgiqdji0s398abio7g][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(393): yii\db\Connection->getSlavePdo()
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(412): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(849): yii\db\Schema->getQueryBuilder()
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(116): yii\db\ActiveQuery->one()
+#16 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(144): dektrium\user\Finder->findUserByUsername('daniel')
+#17 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\LoginForm.php(168): dektrium\user\Finder->findUserByUsernameOrEmail('daniel')
+#18 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(350): dektrium\user\models\LoginForm->beforeValidate()
+#19 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\widgets\ActiveForm.php(419): yii\base\Model->validate(NULL)
+#20 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\traits\AjaxValidationTrait.php(34): yii\widgets\ActiveForm::validate(Object(dektrium\user\models\LoginForm))
+#21 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\controllers\SecurityController.php(155): dektrium\user\controllers\SecurityController->performAjaxValidation(Object(dektrium\user\models\LoginForm))
+#22 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#23 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#25 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#26 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/security/l...', Array)
+#27 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(393): yii\db\Connection->getSlavePdo()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(412): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(849): yii\db\Schema->getQueryBuilder()
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(116): yii\db\ActiveQuery->one()
+#14 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(144): dektrium\user\Finder->findUserByUsername('daniel')
+#15 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\LoginForm.php(168): dektrium\user\Finder->findUserByUsernameOrEmail('daniel')
+#16 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(350): dektrium\user\models\LoginForm->beforeValidate()
+#17 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\widgets\ActiveForm.php(419): yii\base\Model->validate(NULL)
+#18 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\traits\AjaxValidationTrait.php(34): yii\widgets\ActiveForm::validate(Object(dektrium\user\models\LoginForm))
+#19 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\controllers\SecurityController.php(155): dektrium\user\controllers\SecurityController->performAjaxValidation(Object(dektrium\user\models\LoginForm))
+#20 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#21 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#24 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/security/l...', Array)
+#25 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#27 {main}
+Additional Information:
+
+2020-03-11 14:05:35 [::1][-][rdbcqgn7vgiqdji0s398abio7g][info][application] $_GET = [
+    'r' => 'user/security/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Chqv9AhF1CETKn81twXGSpqMBHaZEaP3ug_4q3Ydjbw4VtaFfAfibEFIRn3GNLMz28BoM6pb8oGPTr_tHUXM3g=='
+    'login-form' => [
+        'login' => 'daniel'
+        'password' => '123daniel'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'rdbcqgn7vgiqdji0s398abio7g'
+    '_csrf-backend' => 'af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '215'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => 'Chqv9AhF1CETKn81twXGSpqMBHaZEaP3ug_4q3Ydjbw4VtaFfAfibEFIRn3GNLMz28BoM6pb8oGPTr_tHUXM3g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=rdbcqgn7vgiqdji0s398abio7g; _csrf-backend=af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '50475'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fsecurity%2Flogin'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1583935535.214
+    'REQUEST_TIME' => 1583935535
+]
+2020-03-11 14:05:37 [::1][-][rdbcqgn7vgiqdji0s398abio7g][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(393): yii\db\Connection->getSlavePdo()
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(412): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(849): yii\db\Schema->getQueryBuilder()
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(116): yii\db\ActiveQuery->one()
+#16 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(144): dektrium\user\Finder->findUserByUsername('daniel')
+#17 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\LoginForm.php(168): dektrium\user\Finder->findUserByUsernameOrEmail('daniel')
+#18 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(350): dektrium\user\models\LoginForm->beforeValidate()
+#19 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\widgets\ActiveForm.php(419): yii\base\Model->validate(NULL)
+#20 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\traits\AjaxValidationTrait.php(34): yii\widgets\ActiveForm::validate(Object(dektrium\user\models\LoginForm))
+#21 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\controllers\SecurityController.php(155): dektrium\user\controllers\SecurityController->performAjaxValidation(Object(dektrium\user\models\LoginForm))
+#22 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#23 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#25 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#26 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/security/l...', Array)
+#27 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(393): yii\db\Connection->getSlavePdo()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(412): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(849): yii\db\Schema->getQueryBuilder()
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(116): yii\db\ActiveQuery->one()
+#14 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\Finder.php(144): dektrium\user\Finder->findUserByUsername('daniel')
+#15 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\models\LoginForm.php(168): dektrium\user\Finder->findUserByUsernameOrEmail('daniel')
+#16 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(350): dektrium\user\models\LoginForm->beforeValidate()
+#17 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\widgets\ActiveForm.php(419): yii\base\Model->validate(NULL)
+#18 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\traits\AjaxValidationTrait.php(34): yii\widgets\ActiveForm::validate(Object(dektrium\user\models\LoginForm))
+#19 C:\AppServ\www\yiiplus\vendor\dektrium\yii2-user\controllers\SecurityController.php(155): dektrium\user\controllers\SecurityController->performAjaxValidation(Object(dektrium\user\models\LoginForm))
+#20 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#21 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#24 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/security/l...', Array)
+#25 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#27 {main}
+Additional Information:
+
+2020-03-11 14:05:37 [::1][-][rdbcqgn7vgiqdji0s398abio7g][info][application] $_GET = [
+    'r' => 'user/security/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Chqv9AhF1CETKn81twXGSpqMBHaZEaP3ug_4q3Ydjbw4VtaFfAfibEFIRn3GNLMz28BoM6pb8oGPTr_tHUXM3g=='
+    'login-form' => [
+        'login' => 'daniel'
+        'password' => '123daniel'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'rdbcqgn7vgiqdji0s398abio7g'
+    '_csrf-backend' => 'af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '215'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => 'Chqv9AhF1CETKn81twXGSpqMBHaZEaP3ug_4q3Ydjbw4VtaFfAfibEFIRn3GNLMz28BoM6pb8oGPTr_tHUXM3g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=rdbcqgn7vgiqdji0s398abio7g; _csrf-backend=af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '50477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fsecurity%2Flogin'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=user%2Fsecurity%2Flogin'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1583935537.109
+    'REQUEST_TIME' => 1583935537
+]
+2020-03-11 14:05:44 [::1][-][rdbcqgn7vgiqdji0s398abio7g][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(754): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\AppServ\www\yiiplus\common\models\User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\AppServ\www\yiiplus\common\models\LoginForm.php(73): common\models\User::findByUsername('daniel')
+#18 C:\AppServ\www\yiiplus\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#19 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#20 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#21 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#22 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#23 C:\AppServ\www\yiiplus\common\models\LoginForm.php(58): yii\base\Model->validate()
+#24 C:\AppServ\www\yiiplus\backend\controllers\SiteController.php(78): common\models\LoginForm->login()
+#25 [internal function]: backend\controllers\SiteController->actionLogin()
+#26 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#29 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#30 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#32 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#4 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(754): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\AppServ\www\yiiplus\common\models\User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\AppServ\www\yiiplus\common\models\LoginForm.php(73): common\models\User::findByUsername('daniel')
+#16 C:\AppServ\www\yiiplus\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#17 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#18 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#19 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#20 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#21 C:\AppServ\www\yiiplus\common\models\LoginForm.php(58): yii\base\Model->validate()
+#22 C:\AppServ\www\yiiplus\backend\controllers\SiteController.php(78): common\models\LoginForm->login()
+#23 [internal function]: backend\controllers\SiteController->actionLogin()
+#24 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#25 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#26 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#27 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#28 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+Additional Information:
+
+2020-03-11 14:05:44 [::1][-][rdbcqgn7vgiqdji0s398abio7g][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'dyTc3o2wzv_GV6k-Nxgye0U66ThNYICiAno3SStPvJlFaKWv-fL4spQ1kHZGKUcCBHaFfX4q0dQ3O3APQBf9-w=='
+    'LoginForm' => [
+        'username' => 'daniel'
+        'password' => '123daniel'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'rdbcqgn7vgiqdji0s398abio7g'
+    '_csrf-backend' => 'af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '241'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=rdbcqgn7vgiqdji0s398abio7g; _csrf-backend=af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '50480'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1583935544.522
+    'REQUEST_TIME' => 1583935544
+]
+2020-03-11 14:05:59 [::1][-][rdbcqgn7vgiqdji0s398abio7g][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#4 C:\AppServ\www\yiiplus\common\models\User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#5 C:\AppServ\www\yiiplus\common\models\LoginForm.php(73): common\models\User::findByUsername('root')
+#6 C:\AppServ\www\yiiplus\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#7 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#9 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#10 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#11 C:\AppServ\www\yiiplus\common\models\LoginForm.php(58): yii\base\Model->validate()
+#12 C:\AppServ\www\yiiplus\backend\controllers\SiteController.php(78): common\models\LoginForm->login()
+#13 [internal function]: backend\controllers\SiteController->actionLogin()
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#17 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#18 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+2020-03-11 14:05:59 [::1][-][rdbcqgn7vgiqdji0s398abio7g][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'qvPmRyrxP8pQMLDv5d83Xw-ovmBv4FlsR7RWcU-hlaiYv582XrMJhwJSiaeU7kImTuTSJVyqCBpy9RE3JPnUyg=='
+    'LoginForm' => [
+        'username' => 'root'
+        'password' => '12345678'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'rdbcqgn7vgiqdji0s398abio7g'
+    '_csrf-backend' => 'af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yiiplus/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '238'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=rdbcqgn7vgiqdji0s398abio7g; _csrf-backend=af45c5b8cccf8f876f67e435dd9827c4c781d122a61c9652c4a1364d94826082a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222LyqtB6MRb9Hq1uyALlE3JQv5AGFkXAb%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '50488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1583935559.621
+    'REQUEST_TIME' => 1583935559
+]
+2020-03-17 21:02:46 [::1][-][mu9l9nl6atfrq6vvcg2mcdav4g][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:02:45 [::1][-][mu9l9nl6atfrq6vvcg2mcdav4g][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '0cd1ebdb271b4e69b4ff2e16c6bda249bed0b795476ff75917d1a9dc96c8d27da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    'advanced-backend' => 'mu9l9nl6atfrq6vvcg2mcdav4g'
+    '_csrf-backend' => '299be8877c0d474efe8048532a1026bb7b7d43f6e663986deaac436263ac75eaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"t73BWyonMdXJnSuMJW557OJUmugZQ-db\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_identity=0cd1ebdb271b4e69b4ff2e16c6bda249bed0b795476ff75917d1a9dc96c8d27da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; advanced-backend=mu9l9nl6atfrq6vvcg2mcdav4g; _csrf-backend=299be8877c0d474efe8048532a1026bb7b7d43f6e663986deaac436263ac75eaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22t73BWyonMdXJnSuMJW557OJUmugZQ-db%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51613'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584478965.477
+    'REQUEST_TIME' => 1584478965
+]
+2020-03-17 21:03:49 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:03:49 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51628'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479029.532
+    'REQUEST_TIME' => 1584479029
+]
+2020-03-17 21:03:55 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('2')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:03:55 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51636'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=2'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=2'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479035.022
+    'REQUEST_TIME' => 1584479035
+]
+2020-03-17 21:03:58 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('3')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:03:57 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51637'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=3'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=3'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479037.966
+    'REQUEST_TIME' => 1584479037
+]
+2020-03-17 21:04:38 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('2')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:04:38 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51665'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=2'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=2'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479078.407
+    'REQUEST_TIME' => 1584479078
+]
+2020-03-17 21:04:41 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('3')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:04:41 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51666'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=3'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=3'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479081.573
+    'REQUEST_TIME' => 1584479081
+]
+2020-03-17 21:04:44 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:04:44 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51668'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584479084.606
+    'REQUEST_TIME' => 1584479084
+]
+2020-03-17 21:21:06 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:21:06 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51882'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584480066.538
+    'REQUEST_TIME' => 1584480066
+]
+2020-03-17 21:21:14 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:12
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 12, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:21:14 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51883'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584480074.537
+    'REQUEST_TIME' => 1584480074
+]
+2020-03-17 21:21:33 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in C:\AppServ\www\yiiplus\backend\views\rol\_form.php:14
+Stack trace:
+#0 C:\AppServ\www\yiiplus\backend\views\rol\_form.php(14): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\AppServ\\www\\...', 14, Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#2 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#3 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, NULL)
+#4 C:\AppServ\www\yiiplus\backend\views\rol\update.php(21): yii\base\View->render('_form', Array)
+#5 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(348): require('C:\\AppServ\\www\\...')
+#6 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\AppServ\\www\\...', Array)
+#7 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\AppServ\\www\\...', Array, Object(backend\controllers\RolController))
+#8 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(backend\controllers\RolController))
+#9 C:\AppServ\www\yiiplus\backend\controllers\RolController.php(142): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\controllers\RolController->actionUpdate('1')
+#11 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#14 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rol/update', Array)
+#15 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-03-17 21:21:33 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'rol/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/yiiplus/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '51890'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Fupdate&id=1'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=rol%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584480093.301
+    'REQUEST_TIME' => 1584480093
+]
+2020-03-17 22:15:19 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "cliente". in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('cliente', Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2020-03-17 22:15:18 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'cliente'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '52139'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=cliente'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=cliente'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584483318.952
+    'REQUEST_TIME' => 1584483318
+]
+2020-03-17 22:25:47 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "cliente". in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('cliente', Array)
+#1 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\AppServ\www\yiiplus\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\AppServ\www\yiiplus\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2020-03-17 22:25:47 [::1][3][r5m69i1p7a8ptrqqr1fa6ahd7n][info][application] $_GET = [
+    'r' => 'cliente'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r5m69i1p7a8ptrqqr1fa6ahd7n'
+    '_identity' => '824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"-kyKasn5VFO2NmNmNlFAshapBFZbNAbM\",2592000]\";}'
+    '_csrf-backend' => '90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd\";}'
+    'advanced-frontend' => '20rl7gv93t3c7ee2b8it49m4uq'
+    '_csrf-frontend' => 'be143abc584dba6b2bc9d54374ed50860d10ab2b7cd07e23200ec0f21dad1838a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LDo0q5nP3IdH0cFOd5xkg8QpyNkJwwyF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => 'advanced-backend=r5m69i1p7a8ptrqqr1fa6ahd7n; _identity=824ec9a8ecea3903eafd190e61ef4548cbc04fc324a203b62984da0ad9c9746aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22-kyKasn5VFO2NmNmNlFAshapBFZbNAbM%22%2C2592000%5D%22%3B%7D; _csrf-backend=90f9b2d7b511d7ffbe43ee9d8ffd71aac84a399fef1df19f08a58f216208a2bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22lb-TjVHrNPIhYQHoAjaI9efPEQG083Vd%22%3B%7D; advanced-frontend=20rl7gv93t3c7ee2b8it49m4uq; _csrf-frontend=be143abc584dba6b2bc9d54374ed50860d10ab2b7cd07e23200ec0f21dad1838a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22LDo0q5nP3IdH0cFOd5xkg8QpyNkJwwyF%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/AppServ/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/AppServ/www/yiiplus/backend/web/index.php'
+    'REMOTE_PORT' => '52288'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=cliente'
+    'REQUEST_URI' => '/yiiplus/backend/web/index.php?r=cliente'
+    'SCRIPT_NAME' => '/yiiplus/backend/web/index.php'
+    'PHP_SELF' => '/yiiplus/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584483947.321
+    'REQUEST_TIME' => 1584483947
+]
