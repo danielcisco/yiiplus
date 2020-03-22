@@ -30,7 +30,8 @@
         "codeception/module-filesystem": "^1.0",
         "codeception/verify": "~0.5.0 || ~1.1.0",
         "symfony/browser-kit": ">=2.7 <=4.2.4",
-        "dektrium/yii2-user": "*"
+        "dektrium/yii2-user": "*",
+        "yiisoft/yii2-jui": "~2.0.0"
     },
     "config": {
         "process-timeout": 1800,
